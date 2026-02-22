@@ -11,6 +11,113 @@ body {
     color: #333;
 }
 
+/* Header Styles */
+header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+}
+
+/* Hover Effects */
+header nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+header nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: white;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+header nav ul li a:hover::after {
+    width: 80%;
+}
+
+/* Active Link Indicator */
+header nav ul li a:active {
+    transform: translateY(0);
+}
+
+/* Tablet Responsive (768px and below) */
+@media (max-width: 768px) {
+    header {
+        padding: 1rem 1rem;
+    }
+
+    header nav ul {
+        gap: 0.5rem;
+        justify-content: center;
+    }
+
+    header nav ul li a {
+        font-size: 1rem;
+        padding: 0.6rem 1rem;
+        border-radius: 4px;
+    }
+}
+
+/* Mobile Responsive (480px and below) */
+@media (max-width: 480px) {
+    header {
+        padding: 0.75rem 0.5rem;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    header nav ul li {
+        width: 100%;
+    }
+
+    header nav ul li a {
+        display: block;
+        text-align: center;
+        font-size: 0.95rem;
+        padding: 0.75rem 1rem;
+    }
+
+    header nav ul li a::after {
+        display: none;
+    }
+
+    header nav ul li a:hover {
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+}
+
 /* Footer Styles */
 footer {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
