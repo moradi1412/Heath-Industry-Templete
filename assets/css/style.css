@@ -19,7 +19,11 @@ header {
     top: 0;
     z-index: 100;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
+
 
 header nav ul {
     list-style: none;
@@ -69,53 +73,70 @@ header nav ul li a:active {
     transform: translateY(0);
 }
 
-/* Tablet Responsive (768px and below) */
-@media (max-width: 768px) {
-    header {
-        padding: 1rem 1rem;
-    }
 
-    header nav ul {
-        gap: 0.5rem;
-        justify-content: center;
-    }
-
-    header nav ul li a {
-        font-size: 1rem;
-        padding: 0.6rem 1rem;
-        border-radius: 4px;
-    }
+.cta-container {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 40px 20px;
+    margin: 0px 0;
+    text-align: center;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center; 
+    /* align-items: center; */
+    /* gap: 2rem; */
+    /* justify-content: center; */
 }
 
-/* Mobile Responsive (480px and below) */
-@media (max-width: 480px) {
-    header {
-        padding: 0.75rem 0.5rem;
-    }
+.CTA-fill-the-form {
+    font-size: 1.25rem;
+    margin-bottom: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-    header nav ul {
-        flex-direction: column;
-        gap: 0.25rem;
-    }
+.CTA-fill-the-form form {
+    width: 100%;
+    max-width: 480px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 0 auto;
+}
 
-    header nav ul li {
-        width: 100%;
-    }
+.CTA-fill-the-form form input,
+.CTA-fill-the-form form textarea,
+.CTA-fill-the-form form select {
+    display: block;
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    font-size: 1rem;
+    background-color: #fff;
+    color: #222;
+}
 
-    header nav ul li a {
-        display: block;
-        text-align: center;
-        font-size: 0.95rem;
-        padding: 0.75rem 1rem;
-    }
+.CTA-fill-the-form form input::placeholder {
+    color: #777;
+}
 
-    header nav ul li a::after {
-        display: none;
-    }
+.CTA-fill-the-form form button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    background: #fff;
+    color: #5a3ea1;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
 
-    header nav ul li a:hover {
-        background-color: rgba(255, 255, 255, 0.3);
-    }
+.CTA-fill-the-form form button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
 /* Footer Styles */
@@ -177,6 +198,94 @@ footer {
     padding-top: 20px;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Tablet Responsive (768px and below) */
+@media (max-width: 768px) {
+    header {
+        padding: 1rem 1rem;
+    }
+
+    header nav ul {
+        gap: 0.5rem;
+        justify-content: center;
+    }
+
+    header nav ul li a {
+        font-size: 1rem;
+        padding: 0.6rem 1rem;
+        border-radius: 4px;
+    }
+
+    .cta-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 16px;
+    }
+
+    .CTA-fill-the-form {
+        padding: 20px 0;
+    }
+    
+    /* Center welcome text and make submit full-width on small screens */
+    .cta-container #home {
+        text-align: center;
+        padding: 12px 8px;
+    }
+
+    .CTA-fill-the-form form button {
+        width: 100%;
+    }
+}
+
+/* Mobile Responsive (480px and below) */
+@media (max-width: 480px) {
+    header {
+        padding: 0.75rem 0.5rem;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    header nav ul li {
+        width: 100%;
+    }
+
+    header nav ul li a {
+        display: block;
+        text-align: center;
+        font-size: 0.95rem;
+        padding: 0.75rem 1rem;
+    }
+
+    header nav ul li a::after {
+        display: none;
+    }
+
+    header nav ul li a:hover {
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+}
+
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
